@@ -1,0 +1,6 @@
+Notre base de données mongodb est constitué d'un cluster (ClusterIOT) qui contient une base (tp4) qui enfin contient une collection (access).
+
+Nous stockons dans cette collection lors d'une demande d'accès un document contenant l'id de la piscine, l'id de l'utiliseur, la date et la requete. La requete est soit une demande d'ouverture pour entrer dans la piscine, soit une demande d'ouverture pour en sortir.
+
+Exemple de document :
+{"_id":{"$oid":"6482b2c95974a71e1b16c4dd"},"pool":"P_22107039","client":"22107039","date":"08/06/2023","request":"let me in!"}

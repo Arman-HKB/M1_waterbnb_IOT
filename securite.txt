@@ -1,0 +1,11 @@
+Comment, pourrait-on essayer de sécuriser le fait qu’on a la certitude que la géolocalisation envoyée par le téléphone n’a pas été ́"bidouillée” ?
+
+Question pas facile.
+
+Une première méthode pourrait être de vérifier si l'IP du téléphone est bien géolocalisé aux mêmes coordonnées. Mais l'utilisateur pourrait berner cette sécurité avec un VPN. Et la plupart des IP publiques géolocalisent une antenne ou autre du FAI.
+
+Une deuxième méthode serait, à condition que les coordonnées de l'utilisateur sont constamment envoyées au broker de vérifier que dans un cours laps de temps, il ne se serait pas "téléporté".
+
+Une troisième méthode pourrait être d'utiliser une authentification multifacteurs. D'abord avec la géolocalisation puis avec la saisie d'un code pin physique, un code QR à scanner ou autre.
+
+Finalement, on pourrait aussi (meilleure méthode selon nous), alternativement aux codes, utiliser une technologie de communication à courte portée, le Bluetooth (coup de bol la puce de l'ESP32 prend en charge la configuration Bluetooth). La portée maximale est de 10-15 mètres. Si le téléphone s'appaire avec l'objet, on pourra avoir la certitude que la géolocalisation envoyée par le téléphone n’a pas été ́"bidouillée”.
